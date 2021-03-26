@@ -1,0 +1,21 @@
+$(function(){
+  $('.about_open').mouseover(function(){
+    $('.about_submenu').css('display','block');
+    $('.product_submenu').hide();
+  });
+  $('.about_submenu').mouseleave(function(){
+    $('.about_submenu').css('display','none');
+  });
+  $('.product_open').mouseover(function(){
+    $('.product_submenu').show();
+    $('.about_submenu').css('display','none');
+  });
+  $('.product_submenu').mouseleave(function(){
+    $('.product_submenu').hide();
+  });
+
+  $('.another').mouseover(function(){
+    $('.product_submenu').hide();
+    $('.about_submenu').hide();
+  });
+});

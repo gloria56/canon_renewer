@@ -4,30 +4,39 @@
     <meta charset="utf-8">
     <title>canon</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="font/Bebas-Neue.otf">
+    <link rel="stylesheet" href="font/Roboto-Thin.ttf">
   </head>
   <body>
     <div class="wrap">
       <header>
-        <h1><img alt="canon" src="img/logo_red.gif"</h1>
+        <h1><img alt="canon" src="img/logo_red.gif"></h1>
         <nav>
-          <ul class="mainmenu">
-            <li><a href="">About canon</a></li>
-              <ul class="about_submenu">
-                <li><a href="">company introduction</a></li>
-                <li><a href="">News</a></li>
-                <li><a href="">Canon history</a></li>
-              </ul>
-            <li><a href="">Product</a></li>
-              <ul class="product_submenu">
-                <li><a href="">camera</a></li>
-                <li><a href="">lens</a></li>
-                <li><a href="">photo printer</a></li>
-                <li><a href="">Projector</a></li>
-              </ul>
-            <li><a href="">Event</a></li>
-            <li><a href="">Photo gallery</a></li>
-            <li><a href="">Academy</a></li>
-          </ul>
+          <div class="mainmenu">
+            <ul class="mainmenu_list">
+              <li class="another"><a href="">Home</a></li>
+              <li class="about_open"><a href="">About canon</a></li>
+              <li class="product_open"><a href="">Product</a></li>
+              <li class="another"><a href="">Event</a></li>
+              <li class="another"><a href="">Photo gallery</a></li>
+              <li class="another"><a href="">Academy</a></li>
+            </ul>
+          </div>
+          <div class="about_submenu">
+            <ul class="about_submenu_list">
+              <li><a href="sub1.html">company introduction</a></li>
+              <li><a href="sub2.html">News</a></li>
+              <li><a href="">Canon history</a></li>
+            </ul>
+          </div>
+          <div class="product_submenu">
+            <ul class="product_submenu_list">
+              <li><a href="">camera</a></li>
+              <li><a href="">lens</a></li>
+              <li><a href="">photo printer</a></li>
+              <li><a href="">Projector</a></li>
+            </ul>
+          </div>
         </nav>
       </header>
 
@@ -39,14 +48,16 @@
             MORE LIVELY
           </h2>
         </div>
-        <div class="benner_img1">
-            <img src="img/benner1.jpg" alt="camera_img">
-        </div>
-        <div class="benner_img2">
-            <img src="img/benner2.gif" alt="lens_img">
-        </div>
-        <div class="benner_img3">
-            <img src="img/benner3.jpg" alt="projector_img">
+        <div class="slidelist">
+          <div class="sliding">
+            <img class="first" src="img/benner3.gif" alt="camera_img">
+          </div>
+          <div class="sliding">
+            <img class="seccond" src="img/benner2.gif" alt="lens_img">
+          </div>
+          <div class="sliding">
+            <img class="th3" src="img/benner1.jpg" alt="projector_img">
+          </div>
         </div>
       </section>
 
@@ -76,119 +87,164 @@
 
 
       <section id="section3">
-        <h3>Products</h3>
 
-        <svg class="dark_line">
+        <svg class="svgs">
+          <polyline class="dark"
+            points="950,200 950,100 410,100 410,900 1400,900 1400,1500 600,1500 600,2050 1500,2050 1500,2800 410,2800 410,4150 950,4150 950,4382" fill="none" stroke="#171717" stroke-width="8" />
+          <polyline class="light" points="970,270 970,350 1550,350 1550,800 410,800 410,1800 1200,1800 1200,2150 300,2150 300,2900 1500,2900 1500,4250 970,4250 970,4382" fill="none" stroke="#8e8e8e" stroke-width="8"/>
           <style>
-           .dark_line {
-             fill: none;
+           .svgs {
+             width: 1920px;
+             height: 4382px;
+             position: absolute;
+             top: 0;
+             left: 0;
            }
+           .dark {
+             stroke-dasharray: 9242;
+             stroke-dashoffset: 9242;
+             animation-name: dark_line;
+             animation-duration: 13s;
+             animation-direction: alternate;
+             animation-iteration-count: infinite;
+           }
+           .light {
+             stroke-dasharray: 9252;
+             stroke-dashoffset: 9252;
+             animation-name: light_line;
+             animation-duration: 13s;
+             animation-direction: alternate;
+             animation-iteration-count: infinite;
+           }
+           @keyframes dark_line {
+             from {
+               stroke-dashoffset: 9242;
+             }
+             to {
+               stroke-dashoffset: 0;
+             }
+           }
+
+           @keyframes light_line {
+             from {
+               stroke-dashoffset: 9252;
+             }
+             to {
+               stroke-dashoffset: 0;
+               }
+             }
+
           </style>
         </svg>
-        <svg class="light_line">
-          <style>
-           .light_line {
-             fill: none;
-           }
-          </style>
-        </svg>
 
-        <div class="product1_area">
-          <div class="product_img1">
-            <img src="img/camera_img.jpeg" alt="camera_img">
+        <div class="products_areas">
+          <h3 class="main_title">Products</h3>
+          <div class="product1_area">
+            <div class="product_img1">
+              <img src="img/camera_img.jpeg" alt="camera_img">
+            </div>
+            <div class="product_textarea1 st3_textarea">
+              <h3>Cmera</h3>
+              <p>
+                Canon-exclusive technology captures<br/>
+                clearer and more vivid landscapes
+              </p>
+              <button class="bt_background product_bt">All models</button>
+            </div>
           </div>
-          <svg class="product1_img_underline img_underline">
 
-          </svg>
-          <div class="product_textarea1">
-            <h3>Cmera</h3>
-            <p>
-              Canon-exclusive technology captures<br/>
-              clearer and more vivid landscapes
-            </p>
-            <button class="bt_background product_bt">All models</button>
+          <div class="product2_area">
+            <div class="product_img2">
+              <img src="img/photoprinter_img.jpeg" alt="photo_print_img">
+            </div>
+            <div class="product_textarea2 st3_textarea">
+              <h3>Photo printer</h3>
+              <p>
+                Easily print photos over Wi-Fi. <br/>
+                You can have a wonderful landscape as a photo.
+              </p>
+              <button class="bt_background product_bt">All models</button>
+            </div>
           </div>
-          <svg class="product1_text_underline text_underline">
 
-          </svg>
-        </div>
-
-        <div class="product2_area">
-          <div class="product_img2">
-            <img src="img/photoprinter_img.jpeg" alt="photo_print_img">
+          <div class="product3_area">
+            <div class="product_img3">
+              <img src="img/camcorder_img.jpeg" alt="camcoder_img">
+            </div>
+            <div class="product_textarea3 st3_textarea">
+              <h3>Camcorder</h3>
+              <p>
+                Keep your happy moments forever.<br/>
+                You can enjoy your memories<br/>
+                at any time with vivid videos.
+              </p>
+              <button class="bt_background product_bt">All models</button>
+            </div>
           </div>
-          <svg class="product2_img_underline img_underline">
 
-          </svg>
-          <div class="product_textarea2">
-            <h3>Photo printer</h3>
-            <p>
-              Easily print photos over Wi-Fi. <br/>
-              You can have a wonderful landscape as a photo.
-            </p>
-            <button class="bt_background product_bt">All models</button>
+          <div class="product4_area">
+            <div class="product_img4">
+              <img src="img/projector_img.jpg" alt="projector_img">
+            </div>
+            <div class="product_textarea4 st3_textarea">
+              <h3>Projector</h3>
+              <p>
+                Enjoy your own cinema. <br/>
+                You can watch movies anytime <br/>
+                on a clear, big screen.
+              </p>
+              <button class="bt_background product_bt">All models</button>
+            </div>
           </div>
-          <svg class="product2_text_underline text_underline">
-
-          </svg>
-        </div>
-
-        <div class="product3_area">
-          <div class="product_img3">
-            <img src="img/camcorder_img.jpeg" alt="camcoder_img">
-          </div>
-          <svg class="product3_img_underline img_underline">
-
-          </svg>
-          <div class="product_textarea3">
-            <h3>Camcorder</h3>
-            <p>
-              Keep your happy moments forever.<br/>
-              You can enjoy your memories<br/>
-              at any time with vivid videos.
-            </p>
-            <button class="bt_background product_bt">All models</button>
-          </div>
-          <svg class="product3_text_underline text_underline">
-
-          </svg>
-        </div>
-        <div class="product4_area">
-          <div class="product_img4">
-            <img src="img/projector_img.jpg" alt="projector_img">
-          </div>
-          <svg class="product4_img_underline img_underline">
-
-          </svg>
-          <div class="product_textarea4">
-            <h3>Projector</h3>
-            <p>
-              Enjoy your own cinema. <br/>
-              You can watch movies anytime <br/>
-              on a clear, big screen.
-            </p>
-            <button class="bt_background product_bt">All models</button>
-          </div>
-          <svg class="product4_text_underline text_underline">
-
-          </svg>
         </div>
       </section>
 
 
       <section id="section4">
         <svg class="section4_background">
-
+          <polygon class="bakcground" points="1920 0,800 1600,0 1600,1120 0" fill="#f2f3f5"/>
+          <style>
+            .section4_background {
+              width: 1920px;
+              height: 1600px;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+            .addani {
+              animation-name: slideDown;
+              animation-duration: 2s;
+            }
+            @keyframes slideDown {
+              from {
+                height: 0;
+              }
+              to {
+                height: 1600px;
+              }
+            }
+          </style>
         </svg>
-        <h3>Canon gallery</h3>
-        <div class="gallery_textarea">
-          <p>
-            Special photo display <br/>
-            View a variety of photos taken <br/>
-            with Canon’s technology cameras.<br/>
-            Canon has a regular photo exhibition.
-          </p>
-          <button class="bt_background gallery_bt">See more pictures</button>
+        <div class="galley_area">
+          <h3>Canon gallery</h3>
+          <div class="galley_img1">
+            <img src="img/ gallery1_img.jpg" alt="flowr">
+          </div>
+          <div class="gallery_img2">
+            <img src="img/gallery2_img.jpeg" alt="korea">
+          </div>
+          <div class="gallery_img3">
+            <img src="img/gallery3_img.jpg" alt="sunny">
+          </div>
+          <div class="gallery_textarea">
+            <p>
+              Special photo display <br/>
+              View a variety of photos taken <br/>
+              with Canon’s technology cameras.<br/>
+              Canon has a regular photo exhibition.
+            </p>
+            <button class="bt_background gallery_bt">See more pictures</button>
+          </div>
         </div>
       </section>
 
@@ -196,9 +252,14 @@
       <section id="section5">
         <div class="section5_background">
           <style>
-          	.section5_background {
+          	#section5 {
+              width: 1920px;
+              height: 700px;
               background-image: url('img/academi_img.jpeg');
               background-repeat: no-repeat;
+              position: relative;
+              background-size: 1920px;
+              background-position: center;
             	}
           </style>
           <div class="academy_textarea">
@@ -218,15 +279,62 @@
         <div class="footer_logo">
           <img src="img/logo_white.gif" alt="canon">
         </div>
-        <ul>
-          <li><a href="">About canon</a></li>
-          <li><a href="">Product</a></li>
-          <li><a href="">Event</a></li>
-          <li><a href="">Photo gallery</a></li>
-          <li><a href="">Academy</a></li>
-        </ul>
+        <div class="menuarea">
+          <ul>
+            <li><a href="">About canon</a></li>
+            <li><a href="">Product</a></li>
+            <li><a href="">Event</a></li>
+            <li><a href="">Photo gallery</a></li>
+            <li><a href="">Academy</a></li>
+          </ul>
+        </div>
         <p>COPYRIGHT © CANON KOREA CONSUMER IMAGING Inc. All RIGHTS RESERVED</p>
       </footer>
     </div>
+
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript">
+      var isvisible = false;
+
+      $(window).on('scroll',function(){
+        if (checVisible($('#section4'))&&!isvisible){
+          $('.section4_background').addClass('addani');
+          // alert('경고창');
+          isvisible = true;
+        }
+      });
+
+      function checVisible(elm){
+        var viewportHeight = $(window).height();
+        var scrolltop = $(window).scrollTop();
+        var y = $(elm).offset().top;
+        var elementHeight = $(elm).height();
+
+        return ((y < (viewportHeight + scrolltop)) && (y > (scrolltop - elementHeight)));
+      }
+
+//       var isVisible = false;
+//
+// $(window).on('scroll',function() {
+//     if (checkVisible($('#section4'))&&!isVisible) {
+//         // alert('메롱');
+//         $('.section4_background').addClass('addani');
+//         isVisible=true;
+//     }
+// });
+//
+// function checkVisible( elm, eval ) {
+//     eval = eval || "object visible";
+//     var viewportHeight = $(window).height(), // Viewport Height
+//         scrolltop = $(window).scrollTop(), // Scroll Top
+//         y = $(elm).offset().top,
+//         elementHeight = $(elm).height();
+//
+//     if (eval == "object visible") return ((y < (viewportHeight + scrolltop)) && (y > (scrolltop - elementHeight)));
+//     if (eval == "above") return ((y < (viewportHeight + scrolltop)));
+// }
+    </script>
+
   </body>
 </html>
